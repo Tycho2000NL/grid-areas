@@ -1,0 +1,133 @@
+html, body, h3 {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;}
+
+body{background-color: lightblue;}
+
+header {padding: 2em;}
+
+header, aside {background-color: darkgray;}
+
+h1, h3 {font-family: monospace;}
+
+h1, .tagline {color: white;}
+
+section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em;}
+
+.tip {
+  background-color: pink;
+  color: #fff;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding: .2em;}
+
+article {padding: 1em;}
+
+section img {max-width: 100%;}
+
+aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;}
+
+aside h3 {
+  background-color: red;
+  padding: 2em;
+  color: #fff;}
+
+aside a {
+  text-decoration: none;
+  padding: 2em;
+  display: block;}
+
+aside a:hover {
+  background-color: red;
+  color: #fff;}
+
+footer {
+  background-color: yellow;
+  color: #eee;
+  padding: 2em;}
+footer a {
+  color: white;
+  text-decoration: none;}
+
+@media screen and (min-width: 760px) {
+  .afb1 {
+    display: block;
+    background-image: url('lauging.png');
+    background-size: cover;
+    background-position: center center;
+  }
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "head head"
+      "n1 n2"
+      "n1 n3"
+      "n4 n5"
+      "n6"
+      "foto1 n7"
+      "foto1 n8"
+      "n9 side"
+      "n10 side"
+      "foot foot";}
+
+  header {grid-area: head;}
+  .a {grid-area: n1;}
+  .b {grid-area: n2;}
+  .c {grid-area: n3;}
+  .d {grid-area: n4;}
+  .e {grid-area: n5;}
+  .pic1 {grid-area: foto1;}
+  .f {grid-area: n6;}
+  .g {grid-area: n7;}
+  .h {grid-area: n8;}
+  .i {grid-area: n9;}
+  .j {grid-area: n10;}
+
+  aside {grid-area: side;}
+  footer {grid-area: foot;}
+  h1 {font-size: 2.5em;}
+  footer {
+    display: grid;
+    grid-template-columns: 1fr auto;}
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "head head head"
+      "n1 n2 foto1"
+      "n1 n3 foto1"
+      "n4 n5 foto1"
+      "side n6 n6"
+      "side n7 n8"
+      "side n9 n10"
+      "foot foot foot";}
+}
+
+@media screen and (min-width: 1200px) {
+  .pic2 {
+    display: block;
+    background-image: url('images/sla.png');
+    background-size: cover;
+    background-position: center center;}
+
+  .pic2 {grid-area: foto2;}
+
+  body {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "head head head head head"
+      "n1 n1 n2 foto2 foto2"
+      "n1 n1 n3 foto2 foto2"
+      "foto1 n4 n5 n5 n6"
+      "foto1 n7 n7 n8 side"
+      "foto1 n9 n10 n10 side"
+      "foot foot foot foot foot";}
+}
